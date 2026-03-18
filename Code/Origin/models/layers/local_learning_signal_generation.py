@@ -70,10 +70,11 @@ def generate_frequency_matrix(num_rows, num_cols, min_freq=50, max_freq=2000, fr
     t = torch.arange(num_cols).float().unsqueeze(0).cuda()
     sinusoids = torch.sin(frequencies * t )
     return sinusoids
-
+'''
+固定基矩阵用于计算后续内容固定矩阵
 '''
 
-'''
+
 def compute_LLS(activation, labels, temperature=1, label_smoothing=0.0, act_size=1, n_classes=10,
                 modulation_term=None, modulation=False, freq=None, waveform="cosine", loss_function="CE"):
     """
@@ -242,5 +243,6 @@ Summary:
 代码中的 cross_entropy(layer_pred / temperature, labels) 在反向传播时产生的误差 与论文 Eq. (9) 的m=B^T(f(Bo-y))本质对应
 
 x.detach() 和 out.detach() 使得每个 block 只受自身局部损失训练，体现了论文强调的空间局部性。
+
 
 """
