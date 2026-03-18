@@ -8,6 +8,16 @@ import math
 __all__ = ["LinearSTDP", "Conv2dSTDP", "LinearRecSTDP"]
 
 
+"""
+主要对应论文里“eligibility trace + STDP 型三因子更新”的核心学习规则本体
+
+local_learning_signal_generation.py 负责产生每层的局部调制信号m[t]
+
+stdp_layers.py 负责维护 pre/post traces,并把这个调制信号与资格迹结合,形成最终的权重更新 ΔW(l)[t]
+
+
+"""
+
 class LinearSTDP(nn.Linear):
 
     def __init__(self,
