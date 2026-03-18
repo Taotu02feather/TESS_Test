@@ -30,3 +30,14 @@
 - 尝试跑通源代码
 
 具体的代码内容可以在py文件中查看注释内容
+
+### 现已注释的文件
+
+#### main.py
+
+#### models: 
+
+##### layer: 
+
+- local_learning_signal_generation.py; 
+- stdp_layers.py
