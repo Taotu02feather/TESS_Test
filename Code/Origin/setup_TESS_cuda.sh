@@ -42,7 +42,7 @@ python -m pip install --upgrade pip
 python -m pip install \
     "setuptools==75.1.0" \
     "wheel==0.46.3" \
-    "packaging==24.2" \
+    "packaging>=24.0" \
     "ninja"
 
 # ninja 有些包会用到，先装上，避免构建时报找不到
