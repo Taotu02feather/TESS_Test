@@ -41,8 +41,7 @@ echo "[INFO] Installing stable pip/setuptools/wheel/packaging ..."
 python -m pip install --upgrade pip
 python -m pip install \
     "setuptools==75.1.0" \
-    "wheel==0.46.3" \
-    "packaging>=24.0" \
+    "packaging==23.2" \
     "ninja"
 
 # ninja 有些包会用到，先装上，避免构建时报找不到
@@ -55,6 +54,7 @@ python -m pip install --prefer-binary --no-cache-dir \
     torchvision==0.17.1+cu118 \
     --index-url https://download.pytorch.org/whl/cu118
 
+
 # ====== 6) 安装其余依赖 ======
 echo "[INFO] Installing remaining packages ..."
 python -m pip install --prefer-binary --no-cache-dir \
@@ -64,7 +64,6 @@ python -m pip install --prefer-binary --no-cache-dir \
     pandas==2.1.4 \
     Pillow==11.2.1 \
     tonic==1.4.3
-
 
 
 
