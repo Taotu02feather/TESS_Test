@@ -1,8 +1,8 @@
-PWD d:/ZJULearningFiles/SNN/Projects/TESS/Git_TESS_Learning/Paper/arXiv-2502.01837v1.tar
+PWD d:/ZJULearningFiles/SNN/Projects/TESS/TESS_Test/PaperLearning/arXiv-2502.01837v1.tar
 INPUT d:/LaTeX/texlive/2025/texmf.cnf
 INPUT d:/LaTeX/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT d:/LaTeX/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/ZJULearningFiles/SNN/Projects/TESS/Git_TESS_Learning/Paper/arXiv-2502.01837v1.tar/main.tex
+INPUT d:/ZJULearningFiles/SNN/Projects/TESS/TESS_Test/PaperLearning/arXiv-2502.01837v1.tar/main.tex
 OUTPUT main.log
 INPUT ./IEEEtran.cls
 INPUT IEEEtran.cls
