@@ -41,3 +41,11 @@
 
 - local_learning_signal_generation.py; 
 - stdp_layers.py
+
+## March 19
+
+- 当前任务是先完成对 local_learning_signal_generation.py;stdp_layers.py 两个文件的注释
+
+- 完成后，对文章的结果进行复现，首先第一步先跑通当前的原有代码，保证能有结果输出
+
+- 在此基础上，结合其他的工程文件，形成自己的新的复现工程

@@ -40,3 +40,5 @@ torch==2.2.1+cu118
 torchvision==0.17.1+cu118
 
 ```
+
+详细更新内容见 **UpdateLog** 部分
