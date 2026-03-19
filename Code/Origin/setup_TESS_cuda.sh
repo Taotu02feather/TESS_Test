@@ -34,26 +34,29 @@ conda activate "${ENV_NAME}"
 echo "[INFO] Python executable: $(which python)"
 python --version
 
-# ====== 4) 先升级安装工具 ======
-echo "[INFO] Upgrading pip/setuptools/wheel ..."
-python -m pip install --upgrade pip setuptools wheel packaging
+
+
+# ====== 4) 安装稳定的打包工具链 ======
+echo "[INFO] Installing stable pip/setuptools/wheel/packaging ..."
+python -m pip install --upgrade pip
+python -m pip install \
+    "setuptools==75.1.0" \
+    "wheel==0.46.3" \
+    "packaging==24.2" \
+    "ninja"
 
 # ninja 有些包会用到，先装上，避免构建时报找不到
 python -m pip install --upgrade ninja
 
-# ====== 5) 安装 PyTorch CUDA 11.8 版本 ======
-echo "[INFO] Installing torch==2.2.1+cu118 and torchvision==0.17.1+cu118 ..."
+# ====== 5) 安装 PyTorch CUDA 11.8 ======
+echo "[INFO] Installing torch/torchvision with CUDA 11.8 ..."
 python -m pip install --prefer-binary --no-cache-dir \
     torch==2.2.1+cu118 \
     torchvision==0.17.1+cu118 \
     --index-url https://download.pytorch.org/whl/cu118
 
 # ====== 6) 安装其余依赖 ======
-# 说明：
-# - mlflow 依赖链里常会拉到 pandas
-# - 显式指定 pandas 的 wheel 版本，尽量避免 metadata-generation/source build 问题
-# - numpy 固定为要求的 1.24.1
-echo "[INFO] Installing the remaining packages ..."
+echo "[INFO] Installing remaining packages ..."
 python -m pip install --prefer-binary --no-cache-dir \
     joblib==1.3.2 \
     mlflow==2.10.2 \
@@ -61,6 +64,10 @@ python -m pip install --prefer-binary --no-cache-dir \
     pandas==2.1.4 \
     Pillow==11.2.1 \
     tonic==1.4.3
+
+
+
+
 
 # ====== 7) 依赖检查 ======
 echo "[INFO] Running pip check ..."
