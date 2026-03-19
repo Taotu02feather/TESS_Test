@@ -70,6 +70,7 @@ def generate_frequency_matrix(num_rows, num_cols, min_freq=50, max_freq=2000, fr
     t = torch.arange(num_cols).float().unsqueeze(0).cuda()
     sinusoids = torch.sin(frequencies * t )
     return sinusoids
+    
 '''
 固定基矩阵用于计算后续内容固定矩阵
 '''
