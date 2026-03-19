@@ -60,3 +60,7 @@
 1. 对文章中alpha_post部分的消融实验进行测试
 
 2. 完成script.sh部分的测试
+
+为了避免混淆，我们使用script_new.sh 进行测试，并且对于alpha_post测试部分我们使用script_alpha_post.sh
+
+这两个文件我们会更改输出log的路径，这样防止混淆
