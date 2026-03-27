@@ -76,3 +76,25 @@
 2. 完成script.sh部分的测试
 
 正在训练中，但是鉴于内存需求较大（已经占用了cuda内存导致溢出的情况），所以需要较长时间
+
+
+## March 24
+
+进行组会汇报
+
+## March 27
+
+检测出来问题：
+```
+AttributeError: module 'numpy' has no attribute 'bool'
+```
+
+`cifar10_dvs.py` 和当前 NumPy 版本不兼容
+
+修改方案：
+
+```
+polarity = read_bits(addr, polarity_mask, polarity_shift).astype(np.bool)
+```
+
+修改`np.bool`为`np.bool_`
