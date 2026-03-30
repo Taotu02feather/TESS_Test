@@ -27,3 +27,9 @@ Under the Dir:`\experiments`,
 - `DVSGesture_BPTT_`
 
 - `DVSGesture_TESS_`
+
+## 分析文件：
+
+- `parse_bptt_tess_compare.py`
+
+- `plot_bptt_tess_compare.m`
