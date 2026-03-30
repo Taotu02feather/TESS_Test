@@ -101,8 +101,10 @@ polarity = read_bits(addr, polarity_mask, polarity_shift).astype(np.bool)
 
 ## March 30
 
-更新了文件夹 **1_Training_Results**，使用markdown文件进行结果总结
+更新了文件夹 **Code\Origin\1_Training_Results**，使用markdown文件进行结果总结
 
 $\alpha_{post}$消融实验：`1_AblationStudyOnIncludingNonCausalTerms.md`
 
 $BPTT$与$TESS$在不同图像识别任务上的比较：`2_ComparisonOfBPTTAndTESSAcrossDifferentImageRecognitionTasks.md`
+
+关于文件和运行的细节在上述的2个markdown文件下。
