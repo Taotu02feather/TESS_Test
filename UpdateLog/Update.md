@@ -44,7 +44,7 @@
 
 ## March 19
 
-- 当前任务是先完成对 local_learning_signal_generation.py;stdp_layers.py 两个文件的注释
+- 当前任务是先完成对 `local_learning_signal_generation.py;stdp_layers.py` 两个文件的注释
 
 - 完成后，对文章的结果进行复现，首先第一步先跑通当前的原有代码，保证能有结果输出
 
@@ -98,3 +98,11 @@ polarity = read_bits(addr, polarity_mask, polarity_shift).astype(np.bool)
 ```
 
 修改`np.bool`为`np.bool_`
+
+## March 30
+
+更新了文件夹 **1_Training_Results**，使用markdown文件进行结果总结
+
+$\alpha_{post}$消融实验：`1_AblationStudyOnIncludingNonCausalTerms.md`
+
+$BPTT$与$TESS$在不同图像识别任务上的比较：`2_ComparisonOfBPTTAndTESSAcrossDifferentImageRecognitionTasks.md`
