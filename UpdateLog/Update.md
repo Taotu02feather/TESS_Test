@@ -105,6 +105,6 @@ polarity = read_bits(addr, polarity_mask, polarity_shift).astype(np.bool)
 
 $\alpha_{post}$消融实验：`1_AblationStudyOnIncludingNonCausalTerms.md`
 
-$BPTT$与$TESS$在不同图像识别任务上的比较：`2_ComparisonOfBPTTAndTESSAcrossDifferentImageRecognitionTasks.md`
+$BPTT$ 与 $TESS$ 在不同图像识别任务上的比较：`2_ComparisonOfBPTTAndTESSAcrossDifferentImageRecognitionTasks.md`
 
 关于文件和运行的细节在上述的2个markdown文件下。
